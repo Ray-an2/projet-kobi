@@ -1,0 +1,32 @@
+services:
+  backend:
+    image: js_backend:v3
+    build: ./backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/app
+    container_name: backend
+    networks:
+      - app-network
+    restart: on-failure
+
+  frontend:
+    image: js_frontend:v3
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    env_file:
+      - ./frontend/.env
+    volumes:
+      - ./frontend:/app
+    container_name: frontend
+    networks:
+      - app-network
+    restart: on-failure
+
+networks:
+  app-network:
+    driver: bridge

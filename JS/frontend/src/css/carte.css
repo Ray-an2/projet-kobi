@@ -1,0 +1,301 @@
+.carte-page {
+  animation: zoomIn 0.3s ease;
+  transform-origin: center;
+  font-family: sans-serif;
+  background-color: #245238;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.cover {
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.btn-back{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: max-content;
+}
+
+.icon{
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.carte-content {
+  padding: 20px;
+}
+
+.carte-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  gap: 1rem;
+}
+
+.location p {
+  margin: 0;
+  font-size: 1em;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.location p:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.move-menu {
+  margin-top: 0.5rem;
+  display: flex;
+  width: 150px;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 0.5rem;
+  width: max-content;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.card-title{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.icon-btn {
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu-carte {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f4f5ef;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  padding: 8px 0;
+  min-width: 150px;
+}
+
+.dropdown-menu-carte ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dropdown-menu-carte li {
+  padding: 8px 16px;
+  cursor: pointer;
+  color:black;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu-carte li:hover {
+  background-color: #3a885c;
+}
+
+.tags-d {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-d {
+  background: #ddd;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  display: inline-flex;
+  gap: 0.3rem;
+  align-items: center;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.dates div {
+  margin: 0.5rem 0;
+}
+
+.membres-list{
+  border-radius: 100%;
+}
+
+.activity-log {
+  list-style: none;
+  padding-left: 0;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #f4f5ef;
+  padding: 24px;
+  border-radius: 12px;
+  max-height: 80vh;
+  overflow-y: auto;
+  width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal textarea {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.modal-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.modal-section select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 2px 2px 0px #1c3b2a;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-confirm {
+  margin-top: 4px;
+  background-color: #245238;
+  color: #f4f5ef;
+}
+
+.btn-confirm:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.btn-cancel {
+  margin-top: 4px;
+  background-color: #245238;
+  color: #f4f5ef;
+}
+
+.liste-membres {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.ligne-membre {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.ligne-membre:hover {
+  background: #3a885c;
+}
+
+.membre-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.membre-initiales {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #888;
+  color: #f4f5ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: 14px;
+}
+
+.membre-nom {
+  flex: 1;
+  font-size: 16px;
+}
+
+.icone-check {
+  color: green;
+  font-size: 18px;
+}
+
+.liste-tag {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  width: 90%;
+  margin: 4px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

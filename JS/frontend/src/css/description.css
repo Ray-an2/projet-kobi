@@ -1,0 +1,99 @@
+.des-wrapper {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--text-dark);
+}
+
+.modal-content h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.modal-content p,
+.modal-content strong {
+  color: var(--text-dark);
+  font-size: 1rem;
+}
+
+.modal-content img {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.modal-content input[type="text"],
+.modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.modal-content textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.modal-content label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-right: 1rem;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}
+
+.modal-content input[type="radio"] {
+  accent-color: var(--primary);
+}
+
+.modal-content button {
+  background-color: var(--primary);
+  color: var(--text-light);
+  border: none;
+  padding: 0.6rem 1rem;
+  margin: 0.5rem 0.5rem 0 0;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-content button:hover {
+  background-color: var(--hover);
+  transform: scale(1.05);
+}
+
+.close-btn {
+  background-color: transparent;
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  float: right;
+  cursor: pointer;
+  margin-top: -1rem;
+  margin-right: -1rem;
+}
+
+.close-btn:hover {
+  color: var(--hover);
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 1rem;
+  }
+
+  .modal-content input[type="text"],
+  .modal-content textarea {
+    font-size: 0.95rem;
+  }
+
+  .modal-content button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.95rem;
+  }
+}
